@@ -1,0 +1,23 @@
+import datetime
+
+# Obtém a data atual
+hoje = datetime.datetime.now()
+
+# Lista para conter ano, mês e dia do nascimento do usuário
+list_data_nascimento = []
+
+# Obtém ano de nascimento
+list_data_nascimento.append(int(input('Ano de seu nascimento: ')))
+# Obtém mês de nascimento
+list_data_nascimento.append(int(input('Mês de seu nascimento: ')))
+# Obtém dia de nascimento
+list_data_nascimento.append(int(input('Dia de seu nascimento: ')))
+
+# Cria a data de nascimento de acordo com informado pelo usuário
+data_nascimento = datetime.datetime(list_data_nascimento[0], list_data_nascimento[1], list_data_nascimento[2])
+
+# Calcula os dias vividos
+dias_vividos = abs((hoje-data_nascimento).days)
+
+# Exibe os dias vividos
+print('Você viveu {} dias.'.format(dias_vividos))
